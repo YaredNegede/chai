@@ -22,3 +22,6 @@ the things i used are: -
     axios http client
     sequelizer database orm
     redux thunk middleware
+    
+ Gorm IDE
+  https://goor.me/q1kjA
