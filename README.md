@@ -14,3 +14,11 @@ To run the user interface:-
     sudo npm start
 you should use mysql database server; you can get the configuration for database server from under config
 config.json file
+
+the things i used are: - 
+    reactjs with material-ui library
+    redux statemanagement
+    react router for routing
+    axios http client
+    sequelizer database orm
+    redux thunk middleware
