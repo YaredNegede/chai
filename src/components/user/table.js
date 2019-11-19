@@ -11,6 +11,8 @@ import IconButton from '@material-ui/core/IconButton';
 import AddShoppingCartIcon from '@material-ui/icons/Add';
 import { connect } from 'react-redux'
 
+import Button from '@material-ui/core/Button';
+
 const rows = [
     {"FirstName":'Joe', "lastName":"Tribiani", "age":23,"employementDate":new Date()},
     {"FirstName":'Joe', "lastName":"Tribiani", "age":23,"employementDate":new Date()}
@@ -100,8 +102,12 @@ class ViewEmployee extends React.Component {
                                 <TableCell align="right">{row.lastName}</TableCell>
                                 <TableCell align="right">{row.age}</TableCell>
                                 <TableCell align="right">{row.employementDate.toISOString()}</TableCell>
-                                <TableCell align="right">Delete</TableCell>
-                                <TableCell align="right">Edit</TableCell>
+                                <TableCell align="right">
+                                <Button onClick={this.props.del}>Delete</Button>
+                                  </TableCell>
+                                <TableCell align="right">
+                                <Button  onClick={this.props.edit}>edit</Button>
+                                </TableCell>
                             </TableRow>
                         ))}
     
@@ -130,7 +136,41 @@ const mapStateToProps = (state) => {
         
         e.preventDefault();
         
-        const action = {};
+        const action = {
+            action:"add",
+            meta:{
+                type : "api"
+            }
+        };
+  
+        dispatch(action);
+  
+      },
+      del: (e) => {
+        
+        e.preventDefault();
+        
+        const action = {
+            action:"del",
+            meta:{
+                type : "api"
+            }
+        };
+  
+
+        dispatch(action);
+  
+      },
+      edit: (e) => {
+        
+        e.preventDefault();
+        
+        const action = {
+            action:"edit",
+            meta:{
+                type : "api"
+            }
+        };
   
         dispatch(action);
   

@@ -5,7 +5,7 @@ const port = 80
  
 
 app.get('/employee', (req, res) => {
-    res.send( getAllEmployee())
+    res.send(repository.getAllEmployee())
 });
 
 

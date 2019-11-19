@@ -1,17 +1,25 @@
+const Employee = require('./../models/employee')
+
 const getAllEmployee=()=>{
-   return "*********getting all employee************"
+  
+   return  Employee.findAll()
 }
 
-const createEmployee=()=>{
-    return "*********create employee************"
+const createEmployee=(employee)=>{
+
+  return Employee.create(employee);
+
 }
 
-const updateEmployee=()=>{
-   return "*********update employee************"
+const updateEmployee=(employee)=>{
+
+  return Employee.update(employee);
 }
 
-const deleteEmployee=()=>{
-   return "*********delete employee************";
+const deleteEmployee=(id)=>{
+
+  return Employee.remove(employee);
+
 }
 
 module.exports = {
